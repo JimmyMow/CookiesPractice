@@ -1,0 +1,28 @@
+<%= form_for(@gear) do |g| %>
+
+<div>
+    <%= g.label :name %><br />
+    <%= g.text_field :name %>
+  </div>
+
+  <div>
+    <%= g.label :category %><br />
+    <%= g.text_field :category %>
+  </div>
+
+  <div>
+    <%= g.label :price %><br />
+    <%= g.number_field :price %>
+  </div>
+
+  <div>
+    <%= g.label :image_url %><br />
+    <%= g.text_field :image_url %>
+  </div>
+
+
+  <div>
+    <%= g.submit %>
+  </div>
+
+<% end %>

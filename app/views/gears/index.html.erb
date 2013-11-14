@@ -1,0 +1,38 @@
+<style type="text/css">
+.navbar-inverse .navbar-brand:hover {
+  color: #CC3F3B;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+ color: #CC3F3B;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+  color: #CC3F3B;
+}
+
+</style>
+
+<h1>Gear</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <% @gears.each do |gear| %>
+    <%= render 'table', gear: gear %>
+  <% end %>
+</table>
+
+
+<div class="ribbon">
+  <h3>Your recently viewed items</h3>
+    <% @last_viewed_array.each do |gear| %>
+      <%= image_tag(gear.image_url, class: "poster-container img-circle") %>
+    <% end %>
+</div>
